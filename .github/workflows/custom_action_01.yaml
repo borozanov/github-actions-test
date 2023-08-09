@@ -11,6 +11,8 @@ jobs:
       - name: Step Two
         # Execute the command in the bash
         run: env | sort
+      - name: Print Date
+        run: date "+%Y-%m-%d"
   job2:
     name: Second Job
     runs-on: windows-latest
