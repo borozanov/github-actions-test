@@ -1,0 +1,22 @@
+name: custom_CI
+on: push
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step One
+        # Use the github defined action to checkout the repo locally
+        uses: actions/checkout@v2
+      - name: Step Two
+        # Execute the command in the bash
+        run: env | sort
+  job2:
+    name: Second Job
+    runs-on: windows-latest
+    steps:
+      - name: Step One
+        uses: actions/checkout@v2
+      - name: Step Two
+        # Here the OS shell is PowerShell
+        run: "Get-ChildItem Env: | Sort-Object Name"
