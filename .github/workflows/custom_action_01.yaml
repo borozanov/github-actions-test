@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Step One
         # Use the github defined action to checkout the repo locally
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Step Two
         # Execute the command in the bash
         run: env | sort
@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Step One
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Step Two
         # Here the OS shell is PowerShell
         run: "Get-ChildItem Env: | Sort-Object Name"
