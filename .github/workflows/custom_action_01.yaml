@@ -20,3 +20,11 @@ jobs:
       - name: Step Two
         # Here the OS shell is PowerShell
         run: "Get-ChildItem Env: | Sort-Object Name"
+  job3:
+    name: Final Job
+    runs-on: ubuntu-latest
+    needs: [job1, job2]
+    steps:
+      - name: Final Step
+        run: "echo All Jobs Done!"
+    
