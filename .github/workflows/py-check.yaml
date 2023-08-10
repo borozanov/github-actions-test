@@ -1,0 +1,11 @@
+name: Python Checker
+
+on: [push]
+
+jobs:
+  syntax_check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout/@v3
+      
