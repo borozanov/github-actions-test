@@ -2,7 +2,7 @@ import numpy as np
 
 def print_transpose(a):
     a = np.array(a)
-    print(train_orig[0, 0], '\n', trainX[0, :])
+    print(a.T)
 
 
 if __name__ == '__main__':
