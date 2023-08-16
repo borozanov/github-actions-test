@@ -1,0 +1,14 @@
+name: Enviorment Vars
+env:
+  GLOBAL_ENV: 'Sample for global workflow env'
+  OVER_RIDE: 'Workflow'
+on: [push]
+jobs:
+  ubuntu:
+    env:
+      JOB_ENV: 'Sample for job env (smaller scope)'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print custom vars
+
+        
