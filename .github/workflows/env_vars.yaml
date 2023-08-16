@@ -26,4 +26,9 @@ jobs:
           echo "2b. ${{ env.JOB_ENV }}"
           echo "3b. ${{ env.STEP_ENV }}"
           echo "4b. ${{ env.OVER_RIDE }}"
+          echo "----------------------------------"
+          echo "Print default GitHub variables"
+          echo "${{ GITHUB_ACTOR }}"
+          echo "${{ GITHUB_WORKSPACE }}"
+          echo "${{ GITHUB_EVENT_NAME}}"
         
