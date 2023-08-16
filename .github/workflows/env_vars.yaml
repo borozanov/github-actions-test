@@ -24,6 +24,6 @@ jobs:
           echo "Access YAML variables"
           echo "1b. ${{ env.GLOBAL_ENV }}"
           echo "2b. ${{ env.JOB_ENV }}"
-          echo "3b. ${{ env.STEO_ENV }}"
+          echo "3b. ${{ env.STEP_ENV }}"
           echo "4b. ${{ env.OVER_RIDE }}"
         
