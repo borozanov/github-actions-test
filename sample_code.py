@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def print_transpose(a):
     a = np.array(a)
     print(a.T)
