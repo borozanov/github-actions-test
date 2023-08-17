@@ -13,7 +13,7 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v3
       - name: Build ${{ env.FILE_NAME }}
-        run: go build ${{ env/FILE_NAME }}.go
+        run: go build ${{ env.FILE_NAME }}.go
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
