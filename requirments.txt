@@ -4,3 +4,4 @@ pip
 pylint
 pytest
 pytest-flask
+numpy
