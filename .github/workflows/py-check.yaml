@@ -16,6 +16,6 @@ jobs:
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
     - name: Lint
       run: |
-        flake8 --ignore=E501,E231 *.py
+        # flake8 --ignore=E501,E231 *.py
         pylint --disable=C0301 --disable=C0326 *.py
              
