@@ -1,9 +1,10 @@
 import numpy as np
 
 
-def print_transpose(a):
-    a = np.array(a)
-    print(a.T)
+def print_transpose(array):
+    """Return the transposed array."""
+    array = np.array(array)
+    print(array.T)
 
 
 if __name__ == '__main__':
