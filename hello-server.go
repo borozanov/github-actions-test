@@ -1,24 +1,15 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "net/http"
-        "sync"
+    "fmt"
+    "net/http"
 )
 
-func startHttpServer(wg *sync.WaitGroup) *http.Server {
-        srv := &http.Server{Addr: ":1100"}
-        http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-                fmt.Fprintf(w, "Hello %s!", r.URL.Path[1:])
-        })
+func main() {
+    http.HandleFunc("/", HelloServer)
+    http.ListenAndServe(":8080", nil)
+}
 
-        go func() {
-                defer wg.Done()
-                if err := srv.ListenAndServe(); err != http.ErrServerClosed {
-                        log.Fatalf("ListenAndServe(): %v", err)
-                }
-        }()
-
-        return srv
+func HelloServer(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
 }
