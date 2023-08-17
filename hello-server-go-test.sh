@@ -6,5 +6,5 @@ sleep 3
 
 for i in Person1 SecondPerson Me Ender;
 do
-  echo "$(date): $(curl -s http://localhost:11000/${i})"
+  echo "$(date): $(curl -s http://localhost:8080/${i})"
 done
