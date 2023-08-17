@@ -1,3 +1,4 @@
+"""Module print_transpose printing transposed array."""
 import numpy as np
 
 
