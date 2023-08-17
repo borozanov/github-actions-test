@@ -14,8 +14,10 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: cclauss/Find-Python-syntax-errors-action@90f67be9fb626b675a3971b1d08ab29851cb721f
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+    - name: Install Requirments
+      run: pip install --quiet --requirment requirments.txt
     - name: Lint
       run: |
-        # flake8 --ignore=E501,E231 *.py
+        flake8 --ignore=E501,E231 *.py
         pylint --disable=C0301 --disable=C0326 *.py
              
