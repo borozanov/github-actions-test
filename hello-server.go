@@ -1,12 +1,10 @@
 package main
 
 import (
-        "context"
         "fmt"
         "log"
         "net/http"
         "sync"
-        "time"
 )
 
 func startHttpServer(wg *sync.WaitGroup) *http.Server {
